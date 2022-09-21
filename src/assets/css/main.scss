@@ -1,0 +1,41 @@
+@import 'variables'; // Change these defaults to match your page style
+
+/* stylelint-disable */
+@import 'vendor/swiper-bundle.min.css.scss';
+@import 'vendor/bootstrap/bootstrap';
+@import 'mixins';
+/* stylelint-enable */
+
+/* purgecss start ignore */
+@import 'swiper-slider';
+
+/* stylelint-disable indentation */
+@import 'typography';
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'button';
+@import 'form';
+@import 'checklist';
+@import 'animation';
+@import 'accordion';
+@import 'steps';
+@import 'table';
+@import 'countdown-timer';
+@import 'flipclock-timer';
+@import 'product';
+@import 'popup';
+@import 'thankyou';
+/* stylelint-enable */
+
+// Additional Pages
+// @import 'ebook-page';
+
+// @import 'thank-you-page';
+
+// enable for multistep form
+// @import 'multi-step-form';
+// @import 'questionnaire-page';
+
+/* purgecss end ignore */

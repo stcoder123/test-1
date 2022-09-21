@@ -1,0 +1,176 @@
+// --------------------
+// Include Fonts Here
+// --------------------
+
+// @font-face {
+// 	font-family: 'Roc Grotesk';
+// 	src: url('../fonts/RocGrotesk-Regular.woff2') format('woff2'),
+// 		url('../fonts/RocGrotesk-Regular.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
+
+$headings-font: 'IBM Plex Sans', sans-serif;
+$body-font: 'Work Sans', sans-serif;
+
+// --------------------
+//  Include Basic Typography
+// --------------------
+ 
+:root {
+	font-size: 50%; //1rem = 8px
+	@include media-breakpoint-up(md) {
+		font-size: 56.25%; //1rem = 9px
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 62.5%; // 1rem = 10px
+	}
+}
+
+html,
+body {
+	@include font-smoothing('on');
+	font-size: 2rem; //Laptop: 20px, Ipads: 18px, Mobiles: 16px
+	line-height: 1.6;
+	font-family: $body-font;
+	color: $body-color;
+}
+
+p {
+	&:not(:last-child) {
+		margin-bottom: 45px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+// Headline padding
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	line-height: 1.2;
+	margin-bottom: 2rem;
+	font-family: $headings-font;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: $heading-color;
+}
+
+h1,
+.h1 {
+	font-size: 3.5rem; //Laptop: 50px, Ipads: 45px, Mobiles: 40px
+	@include media-breakpoint-up(md) {
+		font-size: 5rem; //Laptop: 50px, Ipads: 45px, Mobiles: 40px
+	}
+}
+
+h2,
+.h2 {
+	font-size: 3.5rem; //Laptop: 46px, Ipads: 41.4px, Mobiles: 36.8px
+	padding-top: 3rem;
+	letter-spacing: -0.02em;
+	@include media-breakpoint-up(md) {
+		font-size: 4rem;
+	}
+	&.border-bottom {
+		position: relative;
+		padding-bottom: 19px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 50px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 20%;
+			right: 20%;
+			border-bottom: 6px solid $secondary;
+			margin: 0 auto;
+			@include media-breakpoint-up(lg) {
+				border-bottom-width: 6px;
+			}
+		}
+	}
+}
+
+h3,
+.h3 {
+	font-size: 3rem; //Laptop: 30px, Ipads: 27px, Mobiles: 24px
+}
+
+h4,
+.h4 {
+	font-size: 2.4rem; //Laptop: 24px, Ipads: 21.6px, Mobiles: 19.2px
+}
+
+h5,
+.h5 {
+	font-size: 2rem; //Laptop: 20px, Ipads: 18px, Mobiles: 16px
+}
+
+h6,
+.h6 {
+	font-size: 1.8rem; //Laptop: 18px, Ipads: 16.2px, Mobiles: 14.4px
+}
+
+// strong {
+// 	font-family: $headings-font;
+// }
+
+// Hero Specific Font Sizes
+.eyebrow {
+	text-transform: uppercase;
+	letter-spacing: -0.075em;
+	font-family: $body-font;
+	color: $secondary;
+	background: $white;
+	padding: 12px 15px;
+	border-radius: 50px;
+	font-weight: 500;
+	margin-bottom: 13px;
+	display: inline-block;
+	font-size: 1.75rem;
+	@include media-breakpoint-up(md) {
+		font-size: 1.6rem;
+		padding: 5px 26px;
+	}
+}
+
+.subheadline {
+	font-size: 2.2rem;
+}
+
+.font-weight {
+	&-bold {
+		font-weight: 700;
+	}
+	&-medium {
+		font-weight: 500;
+	}
+	&-light {
+		font-weight: 300;
+	}
+	&-normal {
+		font-weight: 400;
+	}
+}
+
+u {
+	text-decoration-thickness: 3px;
+	text-decoration-skip-ink: none;
+	text-decoration-color: $secondary;
+	@include media-breakpoint-up(md) {
+		text-decoration-thickness: 5px;
+	}
+}

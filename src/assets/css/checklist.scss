@@ -1,0 +1,119 @@
+ul,
+ol {
+	&.styled-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+ul.styled-list {
+	margin-bottom: 30px;
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 60px;
+	}
+	strong {
+		display: block;
+		color: $black-2;
+		padding-left: 37px;
+		margin-bottom: 17px;
+		@include media-breakpoint-down(md) {
+			line-height: 1.14;
+		}
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
+			margin-bottom: 8px;
+		}
+	}
+	li {
+		background: $white;
+		margin-bottom: 22px;
+		padding: 30px;
+		@include media-breakpoint-up(md) {
+			gap: 29px;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 44px 30px;
+		}
+		img,
+		svg {
+			max-width: 37px;
+			position: absolute;
+			top: 24px;
+			left: 21px;
+			flex-shrink: 0;
+
+			@include media-breakpoint-up(md) {
+				max-width: 74px;
+				position: static;
+			}
+		}
+	}
+}
+
+ol.styled-list {
+	counter-reset: ol-counter;
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 40px;
+	}
+	strong {
+		padding-left: 35px;
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
+		}
+	}
+	li {
+		counter-increment: ol-counter;
+
+		gap: 29px;
+		background: linear-gradient(
+			180deg,
+			#f1f1f1 0%,
+			rgba(241, 241, 241, 0) 100%
+		);
+		margin-bottom: 22px;
+		padding: 23px 13px;
+		margin-bottom: 22px;
+		border: 1px solid $gray;
+		@include media-breakpoint-up(md) {
+			padding: 34px 34px 34px 137px;
+			gap: 29px;
+		}
+
+		&::before {
+			content: counter(ol-counter);
+			position: absolute;
+			top: 20px;
+			left: 13px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 25px;
+			height: 25px;
+			font-size: 1.875rem;
+			line-height: 25px;
+			text-align: center;
+			font-weight: bold;
+			border-radius: 50%;
+			color: $black;
+			background: $primary;
+			box-shadow: -0.872px 9.962px 19px 0px rgba(56, 78, 86, 0.25);
+
+			@include media-breakpoint-up(md) {
+				top: 50%;
+				left: 34px;
+				transform: translateY(-50%);
+				width: 74px;
+				height: 74px;
+				line-height: 74px;
+				font-size: 4.4rem;
+			}
+		}
+	}
+}

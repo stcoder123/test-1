@@ -1,0 +1,57 @@
+// --------------------
+// BUTTON STYLE
+//---------------------
+
+.btn,
+button,
+input[type='submit'],
+input[type='button'] {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	border: 0;
+	margin-bottom: 12px;
+	font-size: 2.2rem;
+	line-height: 1;
+	text-transform: capitalize;
+	padding: 20px 10px;
+	white-space: normal;
+	cursor: pointer;
+	background: $primary;
+	color: $white;
+	transition: background-color 0.4s ease-in-out;
+	font-weight: bold;
+	font-family: $headings-font;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px 15px 35px -16px rgba($primary, 0.4);
+
+	@include media-breakpoint-up(md) {
+		padding: 30px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background: lighten($primary, 15%);
+		text-decoration: none;
+	}
+
+	&.btn-sm {
+		@include media-breakpoint-up(md) {
+			padding: 20px;
+		}
+	}
+}
+
+.btn-section {
+	max-width: 516px;
+	margin: 0 auto;
+	p {
+		width: 71%;
+		margin: 0 auto;
+		font-size: 1.4rem;
+		line-height: 1.4;
+	}
+}

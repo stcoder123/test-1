@@ -1,0 +1,294 @@
+// --------------------
+// GLOBAL COMPONENTS
+//---------------------
+
+// Generic Section Padding - adds padding to each section - most of your sections should use this - override for special cases
+section {
+	padding: 60px 0px;
+	position: relative;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		padding: 80px 0px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 115px 0px;
+	}
+
+	&.less-pad {
+		padding: 60px 0;
+	}
+	&.hero-centered {
+		padding-top: 91px;
+		@include media-breakpoint-up(md) {
+			padding: 100px 0;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 184px 0 100px;
+		}
+	}
+	&.hero-right-aligned {
+		padding-top: 44px;
+		padding-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			padding-top: 84px;
+			padding-bottom: 67px;
+		}
+	}
+	&.two-column {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(lg) {
+			padding-top: 110px;
+			padding-bottom: 110px;
+		}
+	}
+	&.blue-section {
+		@include media-breakpoint-down(md) {
+			padding-top: 91px;
+			padding-bottom: 71px;
+		}
+	}
+	&.guarantee-section {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(lg) {
+			padding-top: 50px;
+			padding-bottom: 81px;
+		}
+	}
+	&.testimonials {
+		@include media-breakpoint-up(lg) {
+			padding-top: 56px;
+			padding-bottom: 183px;
+		}
+	}
+	&.form-section {
+		padding-bottom: 26px;
+		@include media-breakpoint-up(lg) {
+			padding-top: 153px;
+			padding-bottom: 81px;
+		}
+	}
+}
+
+// Background Images - positions the background image behind the content in the section
+.background-image-container {
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		user-select: none;
+	}
+
+	&.img-contain {
+		img {
+			@include media-breakpoint-up(xxl) {
+				object-fit: contain;
+				object-position: 0;
+			}
+		}
+	}
+
+	// Background Overlay - Adds a colour overlay with transparency options
+	&.semi-transparent-bg {
+		&-dark {
+			background: #000;
+
+			img {
+				opacity: 0.6;
+			}
+		}
+
+		&-dark-2 {
+			background: $dark-blue;
+		}
+
+		&-light {
+			background: #fff;
+
+			img {
+				opacity: 0.4;
+			}
+		}
+		&-half-dark {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				background: linear-gradient(
+					270deg,
+					rgba(34, 34, 34, 0.8) 43.51%,
+					rgba(34, 34, 34, 0.8) 65.38%,
+					rgba(0, 0, 0, 0) 98.71%
+				);
+				@include media-breakpoint-up(lg) {
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+// Youtube Video Embeds
+.video-preview-container {
+	position: relative;
+	padding-bottom: 47.85%;
+	overflow: hidden;
+	max-width: 973px;
+	margin: 0 auto 13px;
+	@include media-breakpoint-up(md) {
+		margin: 0 auto 56px;
+	}
+
+	iframe,
+	object,
+	embed,
+	img.poster,
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.play-button {
+		width: 100px;
+		position: absolute;
+		left: calc(50% - 50px);
+		top: calc(50% - 40px);
+		padding: 0;
+		margin: 0;
+		border: none;
+		appearance: none;
+		background: none;
+		z-index: 5;
+		transition: 0.8s ease;
+
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+picture > img {
+	height: auto;
+}
+
+.max-width-image {
+	width: 100%;
+	@include media-breakpoint-up(sm) {
+		max-width: 300px;
+	}
+
+	@include media-breakpoint-up(md) {
+		max-width: 400px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		max-width: 100%;
+	}
+}
+
+.container-fluid {
+	max-width: 1750px;
+}
+
+.color {
+	&-primary {
+		color: $primary;
+	}
+
+	&-secondary {
+		color: $secondary;
+	}
+
+	&-white {
+		color: $white;
+	}
+
+	&-dark {
+		color: $black;
+	}
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+
+	&:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+}
+
+.bg {
+	&-primary {
+		background-color: $primary;
+	}
+
+	&-secondary {
+		background-color: $secondary;
+	}
+
+	&-light {
+		background-color: $light;
+	}
+
+	&-dark {
+		background-color: $dark;
+	}
+
+	&-blue {
+		background-color: $sky-blue;
+	}
+	&-white {
+		background-color: $white;
+	}
+}
+
+.render-crisp {
+	/* stylelint-disable value-no-vendor-prefix */
+	image-rendering: -webkit-optimize-contrast;
+	/* stylelint-enable value-no-vendor-prefix */
+}
+
+hr {
+	border-bottom: 1px solid #b7b7b7;
+	margin: 0 auto 14px;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.shadow {
+	box-shadow: 0px 24px 50px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bg-gradient {
+	background: $gradient !important;
+}
+
+.max-width-100 {
+	max-width: 100%;
+}
