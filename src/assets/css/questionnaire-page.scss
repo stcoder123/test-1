@@ -1,11 +1,47 @@
 .questionnaire-page {
+	#wrapper {
+		overflow: visible;
+		padding: 0;
+	}
+
+	header.scrolled {
+		background: none;
+		box-shadow: none;
+		.header-logo img,
+		.header-logo svg {
+			@include media-breakpoint-up(md) {
+				width: 206px;
+			}
+		}
+	}
+
+	header {
+		padding: 20px 0;
+	}
+
 	.questionnaire {
+		overflow: visible;
+
+		h1 {
+			font-weight: normal;
+		}
+	}
+	.questionnaire {
+		padding: 20px 0 0;
+
 		.img-holder {
-			width: 228px;
-			height: 228px;
+			width: 200px;
+			height: 200px;
 			border-radius: 100%;
 			overflow: hidden;
-			margin: 0 auto 45px;
+			margin: 0 auto 25px;
+
+			@include media-breakpoint-up(md) {
+				width: 228px;
+				height: 228px;
+				margin: 0 auto 35px;
+			}
+
 			img {
 				object-fit: cover;
 				height: 100%;

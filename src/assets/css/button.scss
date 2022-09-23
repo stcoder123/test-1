@@ -11,11 +11,12 @@ input[type='button'] {
 	width: 100%;
 	border: 0;
 	margin-bottom: 12px;
-	font-size: 2.2rem;
+	font-size: 2rem;
 	line-height: 1;
 	text-transform: capitalize;
-	padding: 20px 10px;
+	padding: 25px 15px;
 	white-space: normal;
+	border-radius: 10px;
 	cursor: pointer;
 	background: $primary;
 	color: $white;
@@ -23,11 +24,14 @@ input[type='button'] {
 	font-weight: bold;
 	font-family: $headings-font;
 	position: relative;
+	text-align: center;
+	letter-spacing: -0.02em;
 	z-index: 1;
 	box-shadow: 0px 15px 35px -16px rgba($primary, 0.4);
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		padding: 30px;
+		font-size: 2.4rem;
 	}
 
 	&:hover,
@@ -46,10 +50,16 @@ input[type='button'] {
 }
 
 .btn-section {
-	max-width: 516px;
+	max-width: 512px;
 	margin: 0 auto;
+	text-align: center;
+
+	@include media-breakpoint-up(xl) {
+		max-width: 569px;
+	}
+
 	p {
-		width: 71%;
+		width: 77%;
 		margin: 0 auto;
 		font-size: 1.4rem;
 		line-height: 1.4;

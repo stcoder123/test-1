@@ -6,22 +6,22 @@
 $white: white;
 $black: black;
 $black-2: #1e1d1d;
-$primary: #00b5e4;
+$primary: #27baa4;
 $secondary: #3dcab1;
 $light: white;
 $dark: black;
-$gray: #f1f1f1;
+$gray: #eeeeef;
 $dark-gray: #2f2f2f;
 $dark-blue: #061536;
 
-$body-color: #384560;
+$body-color: $black;
 $heading-color: #061536;
 $sky-blue: #e1eefc;
 
 // Header
 $headerheight: 150px; // Change to approximate header height - adds padding to first section
-$header-starting-width: 251px;
-$header-scrolled-width: 172px;
+$header-starting-width: 206px;
+$header-scrolled-width: 150px;
 $headerbg: $white; // Header scrolled background color.
 
 // Tables

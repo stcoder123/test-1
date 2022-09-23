@@ -11,13 +11,13 @@
 // 	font-display: swap;
 // }
 
-$headings-font: 'IBM Plex Sans', sans-serif;
-$body-font: 'Work Sans', sans-serif;
+$headings-font: 'Roboto', sans-serif;
+$body-font: 'Roboto', sans-serif;
 
 // --------------------
 //  Include Basic Typography
 // --------------------
- 
+
 :root {
 	font-size: 50%; //1rem = 8px
 	@include media-breakpoint-up(md) {
@@ -39,11 +39,24 @@ body {
 
 p {
 	&:not(:last-child) {
-		margin-bottom: 45px;
+		margin-bottom: 20px;
+
 		@include media-breakpoint-up(md) {
-			margin-bottom: 60px;
+			margin-bottom: 30px;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 40px;
 		}
 	}
+}
+
+.highlighted-text {
+	display: inline-block;
+	font-weight: 700;
+	padding: 5px 20px;
+	margin: 0 0 40px;
+	border-radius: 50px;
+	background: rgba(#27baa4, 0.2);
 }
 
 // Headline padding
@@ -59,8 +72,8 @@ h5,
 .h5,
 h6,
 .h6 {
+	margin: 0 0 2rem;
 	line-height: 1.2;
-	margin-bottom: 2rem;
 	font-family: $headings-font;
 	font-weight: bold;
 	text-transform: capitalize;
@@ -71,36 +84,16 @@ h1,
 .h1 {
 	font-size: 3.5rem; //Laptop: 50px, Ipads: 45px, Mobiles: 40px
 	@include media-breakpoint-up(md) {
-		font-size: 5rem; //Laptop: 50px, Ipads: 45px, Mobiles: 40px
+		font-size: 4.5rem; //Laptop: 50px, Ipads: 45px, Mobiles: 40px
 	}
 }
 
 h2,
 .h2 {
-	font-size: 3.5rem; //Laptop: 46px, Ipads: 41.4px, Mobiles: 36.8px
-	padding-top: 3rem;
+	font-size: 3.125rem; //Laptop: 46px, Ipads: 41.4px, Mobiles: 36.8px
 	letter-spacing: -0.02em;
 	@include media-breakpoint-up(md) {
 		font-size: 4rem;
-	}
-	&.border-bottom {
-		position: relative;
-		padding-bottom: 19px;
-		@include media-breakpoint-up(lg) {
-			padding-bottom: 50px;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 20%;
-			right: 20%;
-			border-bottom: 6px solid $secondary;
-			margin: 0 auto;
-			@include media-breakpoint-up(lg) {
-				border-bottom-width: 6px;
-			}
-		}
 	}
 }
 
@@ -141,6 +134,7 @@ h6,
 	margin-bottom: 13px;
 	display: inline-block;
 	font-size: 1.75rem;
+
 	@include media-breakpoint-up(md) {
 		font-size: 1.6rem;
 		padding: 5px 26px;

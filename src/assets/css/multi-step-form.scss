@@ -1,7 +1,7 @@
 /*progressbar*/
 .progressbar {
 	display: flex;
-	margin: 30px 0;
+	margin: 25px 0;
 	counter-reset: step;
 	padding-left: 0px;
 
@@ -23,7 +23,7 @@
 			font-size: 3rem;
 			line-height: 6rem;
 			font-weight: 600;
-			color: #040404;
+			color: $white;
 			background: linear-gradient(0deg, #d4d4d4, #d4d4d4), #a1dfc2;
 		}
 
@@ -35,7 +35,7 @@
 			background: #d4d4d4;
 			position: absolute;
 			left: -50%;
-			top: 2.5rem;
+			top: 3rem;
 			z-index: 1; /*put it behind the numbers*/
 		}
 
@@ -47,7 +47,7 @@
 		&.active:before,
 		&.active:after {
 			background: $primary;
-			color: #040404;
+			color: $white;
 		}
 	}
 }
@@ -62,7 +62,7 @@
 	.infusion-field {
 		/*stacking fieldsets above each other*/
 		position: absolute;
-		padding: 6%;
+		padding: 4% 0;
 		width: 100%;
 
 		/*Hide all except first fieldset*/
