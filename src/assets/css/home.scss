@@ -278,6 +278,10 @@
 			max-width: 100%;
 			height: auto;
 			margin: 0 auto;
+			@include media-breakpoint-up(lg) {
+				max-width: 83%;
+				width: auto;
+			}
 		}
 	}
 }
