@@ -77,6 +77,12 @@
 			@include media-breakpoint-up(md) {
 				padding: 54px 40px 46px;
 			}
+			.btn{
+				background: rgba(39, 186, 164, 0.2);
+				&:hover{
+					background: rgba(39, 186, 164, 0.5);
+				}
+			}
 		}
 
 		.case-study-row {
