@@ -319,6 +319,11 @@
 		@include media-breakpoint-up(md) {
 			padding: 46px 33px;
 		}
+		img{
+			max-width: 100%;
+			display: block;
+			margin:0 auto;
+		}
 	}
 	.icon-holder {
 		min-height: auto;
