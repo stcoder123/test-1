@@ -272,14 +272,15 @@
 	.swiper-wrapper {
 		align-items: center;
 
-		img {
+		img,
+		svg {
 			display: block;
 			width: auto;
 			max-width: 100%;
 			height: auto;
 			margin: 0 auto;
 			@include media-breakpoint-up(lg) {
-				max-width: 83%;
+				max-width: 88%;
 				width: auto;
 			}
 		}
