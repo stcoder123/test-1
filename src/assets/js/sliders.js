@@ -26,7 +26,7 @@ export default function sliders() {
 							slidesPerView: 5,
 						},
 						1199: {
-							spaceBetween: 10,
+							spaceBetween: 15,
 							slidesPerView: 7,
 						},
 					},

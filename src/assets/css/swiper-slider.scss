@@ -93,7 +93,6 @@
 					opacity: 1;
 					visibility: visible;
 				}
-
 			}
 		}
 
@@ -119,6 +118,7 @@
 
 		.text-col {
 			width: 100%;
+			flex-grow: 1;
 			@include media-breakpoint-up(md) {
 				width: 60%;
 			}

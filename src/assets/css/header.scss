@@ -63,7 +63,10 @@ header {
 		height: 38px;
 		background: $white;
 		border-radius: 100%;
-		margin-right: 12px;
+
+		@include media-breakpoint-up(md) {
+			margin-right: 12px;
+		}
 
 		img,
 		svg {
