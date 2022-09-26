@@ -285,6 +285,26 @@
 			}
 		}
 	}
+	.swiper-slide{
+		padding: 10px;
+		@include media-breakpoint-up(lg) {
+			padding: 10px 15px;
+		}
+	}
+	.slide-holder{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+		.slide-logo{
+			padding: 10px;
+			@include media-breakpoint-up(md) {
+				padding: 0;
+			}
+		}
+	}
 }
 
 .feature-section {
