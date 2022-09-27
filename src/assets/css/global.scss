@@ -4,7 +4,7 @@
 
 // Generic Section Padding - adds padding to each section - most of your sections should use this - override for special cases
 section {
-	padding: 45px 0px;
+	padding: 60px 0px;
 	position: relative;
 	overflow: hidden;
 
@@ -25,7 +25,7 @@ section {
 			padding: 100px 0;
 		}
 		@include media-breakpoint-up(lg) {
-			padding: 184px 0;
+			padding: 184px 0 100px;
 		}
 	}
 	&.hero-right-aligned {
@@ -51,6 +51,8 @@ section {
 		}
 	}
 	&.guarantee-section {
+		padding-top: 40px;
+		padding-bottom: 40px;
 		@include media-breakpoint-up(lg) {
 			padding-top: 50px;
 			padding-bottom: 81px;
@@ -59,7 +61,7 @@ section {
 	&.testimonials {
 		@include media-breakpoint-up(lg) {
 			padding-top: 56px;
-			padding-bottom: 60px;
+			padding-bottom: 183px;
 		}
 	}
 	&.form-section {
@@ -104,7 +106,7 @@ section {
 			background: #000;
 
 			img {
-				opacity: 0.2;
+				opacity: 0.6;
 			}
 		}
 
@@ -261,9 +263,6 @@ a {
 	}
 	&-white {
 		background-color: $white;
-	}
-	&-gray {
-		background: $gray;
 	}
 }
 

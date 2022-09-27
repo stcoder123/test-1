@@ -4,7 +4,7 @@ footer {
 	}
 	.container {
 		padding-top: 30px;
-		padding-bottom: 90px;
+		padding-bottom: 100px;
 		@include media-breakpoint-up(lg) {
 			padding-top: 60px;
 			padding-bottom: 60px;
@@ -13,17 +13,9 @@ footer {
 	.logo {
 		margin-bottom: 12px;
 		display: block;
-		width: 240px;
-		margin: 0 auto 18px;
 
 		@include media-breakpoint-up(lg) {
-			margin-bottom: 30px;
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
+			margin-bottom: 45px;
 		}
 	}
 }
